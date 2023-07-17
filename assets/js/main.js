@@ -1,11 +1,11 @@
 /*============= NAVBAR REVEAL ===============*/ 
 const navBtn = document.getElementById("menu-btn");
+const navMenu = document.querySelector('.nav__menu');
+
 const navbarReveal = () => {
-    const navMenu = document.querySelector('.nav__menu');
     navMenu.classList.toggle('show');
 }
 navBtn.addEventListener("click", navbarReveal)
-
 
 // <!--==================== SCROLL REVEAL ====================-->
 

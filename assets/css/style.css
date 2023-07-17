@@ -232,10 +232,11 @@ img {
   display: flex;
   justify-content: center;
   width: 120px;
-  height: 120px; 
+  height: 120px;
   border-radius: 50%;
   border: 5px solid var(--primary-color);
   overflow: hidden;
+  align-self: center;
 }
 
 .about__img img {
@@ -283,11 +284,17 @@ img {
   margin-bottom: 1.5rem;
 }
 
+.skills__listing {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .skills__name {
   padding: 0.5rem 0.75rem;
   margin-top: 2rem;
   border-radius: 6px;
   font-size: var(--small-font-size);
+  transition: all 300ms;
 }
 
 .skills__name:hover {
@@ -301,18 +308,31 @@ img {
 
 /* ================= PORTFOLIO ==================== */
 .portfolio__container {
-  row-gap: 3rem;
+  gap: 3rem;
 }
 
 .portfolio__img {
   position: relative;
   border-radius: 10px;
+  max-height: 250px;
   overflow: hidden;
+  transition: 0.6s;
+  -webkit-box-shadow: 9px 11px 25px -3px rgba(105, 116, 119, 1);
+  -moz-box-shadow: 9px 11px 25px -3px rgba(105, 116, 119, 1);
+  box-shadow: 9px 11px 25px -3px rgba(105, 116, 119, 1);
+}
+
+.portfolio__img:hover {
+  box-shadow: 9px 11px 35px -3px rgba(105, 116, 119, 1);
+  scale: 1.05;
 }
 
 .portfolio__img img {
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 10px;
+  vertical-align: bottom;
 }
 
 .portfolio__link {
@@ -341,11 +361,13 @@ img {
 .contact__container {
   row-gap: 2rem;
 }
+
 .contact__subtitle {
   font-size: var(--normal-font-size);
   color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
+
 .contact__text {
   display: inline-block;
   margin-bottom: 1.7rem;
@@ -382,30 +404,37 @@ img {
 .footer {
   background-color: var(--dark-color);
 }
+
 .footer__container {
   row-gap: 2rem;
 }
+
 .footer__title {
   font-size: var(--normal-font-size);
   color: var(--light-color);
   margin-bottom: 1rem;
   font-weight: bold;
 }
+
 .footer__link {
   padding: 0.55rem 0;
   color: var(--text-color);
 }
+
 .footer__link:hover {
   color: var(--primary-color);
 }
+
 .footer__social {
   font-size: 1.4rem;
   margin-right: 1rem;
   color: var(--text-color);
 }
+
 .footer__social:hover {
   color: var(--primary-color);
 }
+
 .footer__data ul li {
   margin-bottom: 0.5rem;
 }
@@ -429,7 +458,7 @@ img {
   width: 150px;
 }
 
-.thank-you__container .button a{
+.thank-you__container .button a {
   color: white
 }
 
@@ -438,6 +467,7 @@ img {
 /* ================== RESPONSIVE MEDIA QUERIES ================= */
 
 @media screen and (min-width: 768px) {
+
   /*=============== HEADER & NAV ===============*/
   .nav__list {
     display: flex;
@@ -465,6 +495,7 @@ img {
     height: 100vh;
     grid-template-columns: 1fr 1fr;
   }
+
   .home__img {
     bottom: -30%;
   }
